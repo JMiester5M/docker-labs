@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  // Enable standalone output for small, efficient Docker images
+  output: 'standalone',
 };
 
 export default nextConfig;
