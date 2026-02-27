@@ -1,6 +1,6 @@
 # Branching Strategy
 
-This project uses a simple Git workflow with dedicated branches for production, integration, new features, and emergency fixes.
+This project uses a simple Git workflow with dedicated branches for production, integration, and emergency fixes.
 
 ## main (Production-Ready Code)
 
@@ -16,16 +16,6 @@ This project uses a simple Git workflow with dedicated branches for production, 
 - Represents the next release in progress.
 - All feature branches are merged into `develop` via pull requests.
 - When `develop` is in a stable state and ready for release, it is merged into `main`.
-
-## feature/* (New Features)
-
-- Used for developing new features and non-urgent improvements.
-- Naming convention: `feature/<short-feature-name>` (e.g., `feature/docker-setup`).
-- Branches are created from `develop`:
-	- `git switch develop`
-	- `git switch -c feature/<short-feature-name>`
-- Changes are merged back into `develop` using a pull request after review and testing.
-- Once merged, the feature branch can be deleted.
 
 ## hotfix/* (Emergency Fixes)
 

@@ -140,6 +140,20 @@ With Docker installed, the commands in the **Quick Start** section are all that 
 
 ---
 
+## Git Branches & Workflow
+
+This repo uses a simple branching model:
+
+- **main** – production-ready, stable code.
+- **develop** – integration branch for in-progress work.
+- **hotfix/*** – short-lived emergency fix branches created from `main` and deleted after merge.
+
+Long-lived branches are limited to `main`, `develop`, and (optionally) a current `hotfix` branch.
+
+See BRANCHING-STRATEGY.MD for details.
+
+---
+
 ## Next Steps (For Maintainers)
 
 - Customize the **Project Overview** section with your specific BrightPath Tutoring goals and learning outcomes.
