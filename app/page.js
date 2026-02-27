@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>BrightPath Tutoring</h1>
+      <h1 className={styles.title}>Bright</h1>
       <p className={styles.subtitle}>Welcome to your Docker-powered Next.js app.</p>
       <div className={styles.card}>
         <h2>Docker Lab Running ✅</h2>
