@@ -26,6 +26,29 @@ These are copy-paste friendly commands suitable for students on Windows, macOS, 
 
 ---
 
+### Using Docker Compose (App + Database)
+
+The Quick Start commands run only the application container. To start the full stack (app + PostgreSQL database) defined in `docker-compose.yml`, use:
+
+```bash
+docker compose up --build
+```
+
+Once both services are up, apply any pending Prisma migrations from inside the running app container:
+
+```bash
+docker compose exec app npx prisma migrate deploy
+```
+
+- `docker build` / `docker run` (Quick Start) → build and run a single image (`brightpath-app`) by itself.
+- `docker compose up --build` → build and start all services together (your `app` container and the `db` Postgres container) using shared configuration from `docker-compose.yml` and `.env`, then `docker compose exec app npx prisma migrate deploy` keeps the database schema up to date.
+
+Then open your browser at:
+
+- http://localhost:3000
+
+---
+
 ## Architecture
 
 ### High-Level Design
